@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ViewControl.Report3Controller"
+            prefHeight="400.0" prefWidth="400.0">
+
+    <children>
+        <Label text="User Login Report..." underline="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font name="Courier" size="16.0" />
+            </font>
+        </Label>
+        <TableView fx:id="reportField" prefHeight="250.0" prefWidth="340.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+            <columns>
+                <TableColumn fx:id="nameCOL" prefWidth="170.0" text="User Name" />
+                <TableColumn fx:id="timeCOL" prefWidth="170.0" text="Login Time" />
+            </columns>
+        </TableView>
+        <Button fx:id="backBTN" mnemonicParsing="false" onAction="#onBack" text="Back" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+    </children>
+
+</AnchorPane>

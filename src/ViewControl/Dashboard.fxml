@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControl.DashboardController">
+   <top>
+      <AnchorPane maxHeight="75.0" prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="34.0" layoutY="23.0" text="Dashboard" />
+            <Label layoutX="196.0" layoutY="48.0" text="Appointments" />
+            <Label layoutX="770.0" layoutY="48.0" text="Customers" />
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="620.0" prefWidth="50">
+         <children>
+            <Label layoutX="25.0" layoutY="5.0" text="Customers" />
+            <Button layoutX="25.0" layoutY="35" onAction="#addCustomerButton" prefWidth="100" text="Add" />
+            <Button layoutX="25.0" layoutY="65" onAction="#modifyCustomerButton" prefWidth="100" text="Modify" />
+            <Label layoutX="25.0" layoutY="95" text="Appointments" />
+            <Button layoutX="25.0" layoutY="125" onAction="#addAppointmentButton" prefWidth="100" text="Add" />
+            <Button layoutX="25.0" layoutY="155" onAction="#modifyAppointmentButton" prefWidth="100" text="Modify" />
+            <Button layoutX="25.0" layoutY="185" fx:id="weekBTN" onAction="#showByWeekButton" prefWidth="100" text="By Week" />
+            <Button layoutX="25.0" layoutY="215" fx:id="monthBTN" onAction="#showByMonthButton" prefWidth="100" text="By Month" />
+            <DatePicker fx:id="datePicker" layoutX="25.0" layoutY="245.0" onAction="#dateSelected" prefWidth="100.0" />
+            <Label layoutX="25.0" layoutY="275" text="Reports" />
+            <Button layoutX="25.0" layoutY="305" onAction="#report_1_Button" prefWidth="100" text="APP by Type" />
+            <Button layoutX="25.0" layoutY="335" onAction="#report_2_Button" prefWidth="100" text="Consultant" />
+            <Button layoutX="25.0" layoutY="365" onAction="#report_3_Button" prefWidth="100" text="Logins" />
+         </children>
+      </AnchorPane>
+
+
+
+   </left>
+   <center>
+      <TableView fx:id="dashboardAppointmentTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+            <TableColumn fx:id="appIDCol" prefWidth="50.0" text="ID" />
+            <TableColumn fx:id="appCusNameCol" prefWidth="100.0" text="Customer Name" />
+            <TableColumn fx:id="appStartTimeCol" prefWidth="75.0" text="Start Time" />
+            <TableColumn fx:id="appEndTimeCol" prefWidth="75.0" text="End Time" />
+            <TableColumn fx:id="appDateCol" prefWidth="75.0" text="Date" />
+            <TableColumn fx:id="appDescriptionCol" prefWidth="100.0" text="Type" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <right>
+      <TableView fx:id="dashboardCustomerTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="cusIDCol" prefWidth="25.0" text="ID" />
+          <TableColumn fx:id="cusNameCol" prefWidth="100.0" text="Name" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="15.0" right="15.0" />
+         </BorderPane.margin>
+      </TableView>
+   </right>
+</BorderPane>

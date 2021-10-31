@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControl.AppointmentModifyController">
+    <top>
+        <AnchorPane>
+            <Label layoutX="49.0" layoutY="29.0" text="Modify Appointment" />
+        </AnchorPane>
+    </top>
+    <left>
+        <AnchorPane prefHeight="500.0" prefWidth="500.0">
+                <TableView fx:id="appointmentTableView" layoutX="25.0" layoutY="51.0" prefHeight="210.0" prefWidth="675.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+                    <columns>
+                        <TableColumn fx:id="appIDCol" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="appCusNameCol" prefWidth="100.0" text="Customer Name" />
+                        <TableColumn fx:id="appStartTimeCol" prefWidth="75.0" text="Start Time" />
+                        <TableColumn fx:id="appEndTimeCol" prefWidth="75.0" text="End Time" />
+                        <TableColumn fx:id="appDateCol" prefWidth="75.0" text="Date" />
+                        <TableColumn fx:id="appDescriptionCol" prefWidth="100.0" text="Description" />
+                    </columns>
+
+                </TableView>
+
+                <TableView fx:id="customerTableView" layoutX="25.0" layoutY="275.0" prefHeight="210.0" prefWidth="675.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0">
+                    <columns>
+                        <TableColumn fx:id="cusIDCol" prefWidth="38.000022888183594" text="ID" />
+                        <TableColumn fx:id="cusNameCol" prefWidth="126.99998474121094" text="Name" />
+                        <TableColumn fx:id="cusCityCol" prefWidth="92.0" text="City" />
+                        <TableColumn fx:id="cusPhoneCol" prefWidth="99.0" text="Contact" />
+                    </columns>
+
+                </TableView>
+        </AnchorPane>
+    </left>
+
+
+    <center>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" prefWidth="175.0" />
+            <ColumnConstraints />
+
+
+            </columnConstraints>
+            <rowConstraints>
+
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+
+            </rowConstraints>
+            <children>
+                <Label fx:id="cusLBL" text="Customer:" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
+                    <GridPane.margin>
+                    </GridPane.margin></Label>
+                <Label fx:id="conLBL" text="Consultant: " GridPane.columnIndex="0" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                    </GridPane.margin></Label>
+                <ComboBox fx:id="conBox" prefWidth="125" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+
+                    </GridPane.margin></ComboBox>
+                <Label text="Location: " GridPane.columnIndex="0" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                    </GridPane.margin></Label>
+                <Label text="Date:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Time: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Label text="Type: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <DatePicker fx:id="datePick" onAction="#dateSelected" prefHeight="27.0" prefWidth="172.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                    </GridPane.margin></DatePicker>
+                <ComboBox fx:id="timeBox" prefWidth="125" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <GridPane.margin>
+                    </GridPane.margin></ComboBox>
+                <ComboBox fx:id="locBox" prefWidth="125" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                    </GridPane.margin></ComboBox>
+                <ComboBox fx:id="typeBox" prefWidth="125" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                    <GridPane.margin>
+                    </GridPane.margin></ComboBox>
+                <Button fx:id="cancelBTN" onAction="#cancelButton" text="Cancel" GridPane.columnIndex="0" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                    </GridPane.margin></Button>
+                <Button fx:id="saveBTN" onAction="#saveButton" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                    <GridPane.margin>
+                    </GridPane.margin></Button>
+                <Button fx:id="deleteBTN" onAction="#deleteApp" text="Delete" GridPane.columnIndex="0" GridPane.rowIndex="6">
+                    <GridPane.margin>
+                    </GridPane.margin></Button>
+
+            </children>
+        </GridPane>
+
+    </center>
+
+</BorderPane>

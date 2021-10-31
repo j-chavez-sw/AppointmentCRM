@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControl.Report2Controller">
+    <children>
+        <Label text="Generate Consultant Appointment Schedule..." underline="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+            <font>
+                <Font name="Courier" size="16.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="conLBL" text="Select Consultant:" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="50.0" />
+        <TableView fx:id="conTable" prefHeight="350.0" prefWidth="175.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="75.0">
+            <columns>
+                <TableColumn fx:id="conNameCOL" prefWidth="175.0" text="Consultant" />
+            </columns>
+        </TableView>
+        <Label text="Appointments for selected Consultant:" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0" />
+        <TableView fx:id="reportTable" prefHeight="350.0" prefWidth="400.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="75.0">
+            <columns>
+                <TableColumn fx:id="nameCOL" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="dateCOL" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="startCOL" prefWidth="75.0" text="Start" />
+                <TableColumn fx:id="typeCOL" prefWidth="100.0" text="Type" />
+
+            </columns>
+        </TableView>
+        <Button fx:id="backBTN" mnemonicParsing="false" onAction="#onBack" text="Back" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+
+    </children>
+
+</AnchorPane>

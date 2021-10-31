@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="300.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControl.Report1Controller">
+   <children>
+      <Label text="Generate Number of Appointments by Month Report..." underline="true" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="Courier" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="yearLBL" text="YEAR: " AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="50.0" />
+      <Label text="Select Month Below..." AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="75.0" />
+      <ComboBox fx:id="monthBox" onAction="#monthSelected" prefWidth="150.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="95.0" />
+      <Label text="Appointments by type for selected month:" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="50.0" />
+      <TableView fx:id="reportField" prefHeight="150.0" prefWidth="250.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="75.0">
+        <columns>
+          <TableColumn fx:id="typeCOL" prefWidth="150.0" text="Appt. Type" />
+          <TableColumn fx:id="amountCOL" prefWidth="75.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Button fx:id="backBTN" mnemonicParsing="false" onAction="#onBack" text="Back" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+   </children>
+</AnchorPane>

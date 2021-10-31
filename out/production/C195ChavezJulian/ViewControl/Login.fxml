@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewControl.LoginController">
+   <children>
+      <Label fx:id="programNameLBL" layoutX="109.0" layoutY="17.0" text="Scheduler PRO" />
+      <TextField fx:id="userField" layoutX="103.0" layoutY="53.0" />
+      <PasswordField fx:id="passField" layoutX="103.0" layoutY="100.0" />
+      <Label fx:id="usernameLBL" layoutX="36.0" layoutY="58.0" text="Username:" />
+      <Label fx:id="passwordLBL" layoutX="38.0" layoutY="105.0" text="Password:" />
+      <Button fx:id="loginButton" layoutX="184.0" layoutY="145.0" mnemonicParsing="false" onAction="#attemptLogin" text="Login" />
+   </children>
+</AnchorPane>
